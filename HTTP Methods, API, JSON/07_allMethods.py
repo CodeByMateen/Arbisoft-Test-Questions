@@ -30,7 +30,7 @@
     print("Response:", response.text)
 
   # PUT request
-  url = "https://jsonplaceholder.typicode.com/posts/101"
+  url = "https://jsonplaceholder.typicode.com/posts/87"
   data = {
       "userId": 1,
       "id": 101,
@@ -46,7 +46,7 @@
     print("Response:", response.text)
 
   # DELETE request
-  url = "https://jsonplaceholder.typicode.com/posts/101"
+  url = "https://jsonplaceholder.typicode.com/posts/89"
   response = requests.delete(url)
   if response.status_code == 200:  # 200 OK indicates success for a DELETE request
     print("DELETE request successful!")
@@ -56,7 +56,7 @@
     print("Response:", response.text)
 
   # PATCH request
-  url = "https://jsonplaceholder.typicode.com/posts/101"
+  url = "https://jsonplaceholder.typicode.com/posts/52"
   data = {
       "userId": 1,
       "id": 101,
