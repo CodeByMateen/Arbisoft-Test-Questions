@@ -9,6 +9,8 @@ Add /raw to access gist e.g.
 import requests
 users = requests.get("https://gist.github.com/CodeByMateen/220c5a5ff75548f819dd821e7fdc557d/raw")
 
+We can also use: https://jsonplaceholder.typicode.com/posts
+
 # API for Everyone
 
 These have been a big help to me and many others, and they might just be what you need to step up your tech game.
