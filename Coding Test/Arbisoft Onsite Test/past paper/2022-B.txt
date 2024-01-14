@@ -1,0 +1,65 @@
+
+ext Encode
+Problem Statement
+The year is 2035, humans have finally found sentient existence in space on a far off planet and the species existing there seems to be peaceful and as much as in search of us as we were in search of them.
+
+Now after finally finding them, the one problem that remains is communicating with them. Linguists from both civilizations cross their heads, try to research other civilizations' words, letters and come up with some solutions.
+
+After days of brainstorming, they come across a draft which they think will at least break the ice between the two civilizations.
+
+ 
+The aliens come up with this bizarre program after studying English letters and ask humans to code them in the language of their choice to be able to run on their earthly computers.
+
+There’s a 6x5 matrix of all the capital letters, and the program should mention the instructions to type the word. For each word, the cursor always starts with the starting 0,0 position which is A.
+
+Whenever one goes down they print ‘d’, ‘u’ for up and ‘l’ (small L), ‘r’ for left and right respectively.
+
+When cursor is exactly at the letter you need to be, program prints ‘#’.
+
+Since this program needs to print instructions of big words, it has to be very fast in execution.
+
+ABCDE
+
+FGHIJ
+
+KLMNO
+
+PQRST
+
+UVWXY
+
+Z
+
+Like for example, to print ‘UP’ the instructions would be ‘dddd#u#’.
+
+At the start the cursor will be at A position, we will need to do the “d” operation 4 times to come down to 5th row, we will be at position “U” then where we need to be, so we print “#”, then to go to “P”, we need to go up again from that position so we print “u” and then we are at “P” so we just print “#”.
+
+The aliens don’t need space to separate words or punctuation characters for now to get the gist of the language, you can print instructions of words only ignoring the space between them.
+
+Now, to make the encodings consistent for each word, we have set up some rules that:
+
+We will ALWAYS do the vertical operation first. Like if we want to go from A to G we will always do the “d” operation first & then the “r” operation.
+After we are in our relevant row, then we will perform the “l” or “r” operation.
+The program has to be efficient, we want to reach our appropriate letter in the shortest way possible.
+Write a program which takes a word as input and outputs the instructions to print it.
+
+Input
+The input will be a sentence consisting of words (in all capital letters) separated by spaces. The input might have non alphabetical characters which need to be ignored.
+
+If n is the total number of characters in the input sentence,
+
+1  n  5000
+
+Output
+Output will be the print instructions of each word.
+
+Example
+Test Case 1:
+Input: UP
+
+Output: dddd#u#
+
+Test Case 2:
+Input: UP YOU GO
+
+Output: dddd#u#ddddrrrr#uu#ddllll#dr#drrr#
